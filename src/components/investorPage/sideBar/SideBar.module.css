@@ -1,106 +1,143 @@
-.wrapper {
-  background-color: #002992;
-  color: white;
-  padding: 3vw 0;
-  border-radius: 1vw;
+.container {
+  width: 100%;
+  padding: 2vw 2vw 0 2vw;
 }
 
 .header {
   font-size: 5.5vw;
-  padding: 0 1.5vw;
+  color: #002992;
+  font-weight: 700;
+  margin-bottom: 1.5vw;
+  padding: 0;
 }
+
+.wrapper {
+  width: 100%;
+  background-color: #002992;
+  border-radius: 0.5vw;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
 .list {
   list-style: none;
-  padding: 1vw;
+  padding: 2.5vw 2.5vw;
   font-size: 2.6vw;
-  border-right: 2px solid rgba(255, 255, 255, 0);
+  color: white;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: background-color 0.2s ease, border-bottom 0.2s ease;
+  flex-shrink: 0;
 }
+
+.list:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .list.active {
-  background-color: white;
-  color: #002992;
-  border-right: 2px solid red;
+  background-color: #002992;
+  color: white;
+  border-bottom: 3px solid red;
 }
+
 @media only screen and (min-width: 375px) {
 }
 
 @media only screen and (min-width: 480px) {
 }
+
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 640px) {
   .header {
     font-size: 4.5vw;
-    padding: 0 1.5vw;
   }
+
   .list {
-    padding: 1vw;
+    padding: 2vw 2vw;
     font-size: 2vw;
-    border-right: 2px solid rgba(255, 255, 255, 0);
-  }
-  .list.active {
-    background-color: white;
-    color: #002992;
-    border-right: 2px solid red;
   }
 }
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 768px) {
+  .header {
+    font-size: 3.8vw;
+  }
+
+  .list {
+    padding: 1.5vw 2vw;
+    font-size: 1.6vw;
+  }
 }
 
-/*(900px and up) */
+/* (900px and up) */
 @media only screen and (min-width: 900px) {
   .header {
-    font-size: 3.5vw;
-    padding: 0 2.7vw;
+    font-size: 3.2vw;
   }
+
   .list {
-    padding: 1vw;
-    font-size: 1.6vw;
-    padding-left: 3vw;
-    border-right: 3px solid rgba(255, 255, 255, 0);
-  }
-  .list.active {
-    background-color: white;
-    border-right: 3px solid red;
+    padding: 1.2vw 2vw;
+    font-size: 1.5vw;
   }
 }
 
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 1024px) {
   .header {
-    font-size: 3vw;
-    padding: 0 2.7vw;
+    font-size: 2.8vw;
   }
+
   .list {
-    padding: 1vw;
-    font-size: 1.5vw;
-    padding-left: 3vw;
-    border-right: 3px solid rgba(255, 255, 255, 0);
-  }
-  .list.active {
-    background-color: white;
-    border-right: 3px solid red;
+    padding: 1.2vw 2vw;
+    font-size: 1.4vw;
   }
 }
 
 /* Largest devices such as desktops (1280px and up) */
 @media only screen and (min-width: 1280px) {
   .header {
-    font-size: 2.7vw;
-    padding: 0 2.7vw;
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
   }
+
   .list {
-    padding: 1vw;
+    padding: 1vw 1.8vw;
     font-size: 1.2vw;
-    padding-left: 3vw;
-    border-right: 4px solid rgba(255, 255, 255, 0);
-    cursor: pointer;
-  }
-  .list.active {
-    border-right: 4px solid red;
   }
 }
 
-/*  (1350px and up) */
+/* (1440px and up) */
 @media only screen and (min-width: 1440px) {
+  .header {
+    font-size: 2.2vw;
+  }
+
+  .list {
+    font-size: 1.1vw;
+    padding: 1vw 1.5vw;
+  }
 }
